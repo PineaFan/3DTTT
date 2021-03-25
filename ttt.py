@@ -106,15 +106,15 @@ def printBoard(players, turn, text, p, game):
     print(f'|{" "*7}{c.Pink}{p[board[1][2][0]]} {p[board[1][2][1]]} {p[board[1][2][2]]}{c.c}       |{"-"*43}|')
     print(f'|{" "*19}|{" "*43}|')
     print(
-        f'|{" "*9}{c.Red}{p[board[2][0][0]]} {p[board[2][0][1]]} {p[board[2][0][2]]}{c.c}     |  '
+        f'|{" "*9}{c.Red}{p[board[2][0][0]]} {p[board[2][0][1]]} {p[board[2][0][2]]}{c.c}     |  ' +
         (f'It is {pCols[turn]}Player {turn+1}\'s ({players[turn].name}){c.c} turn.        |' if text > -1 else (' '*41 + '|'))
     )
     print(
-        f'|{" "*8}{c.Green}{p[board[2][1][0]]} {p[board[2][1][1]]} {p[board[2][1][2]]}{c.c}      |  '
+        f'|{" "*8}{c.Green}{p[board[2][1][0]]} {p[board[2][1][1]]} {p[board[2][1][2]]}{c.c}      |  ' +
         (f'Type either {c.Green}1 2{c.c} or {c.Green}3{c.c} to select {"top, " if text==0 else "left," if text==1 else "back,"}     |' if text > -1 else (' '*41 + '|'))
     )
     print(
-        f'|{" "*7}{c.Pink}{p[board[2][2][0]]} {p[board[2][2][1]]} {p[board[2][2][2]]}{c.c}       |  '
+        f'|{" "*7}{c.Pink}{p[board[2][2][0]]} {p[board[2][2][1]]} {p[board[2][2][2]]}{c.c}       |  ' +
         (f'middle or {"bottom." if text==0 else "right. " if text==1 else "front. "}{" "*24}|' if text > -1 else (' '*41 + '|'))
     )
     print(f'|{" "*19}|{" "*43}|')
