@@ -40,7 +40,7 @@ class c:
     WhiteInverted = '\033[107m'
 
 
-pCols = [c.Red, c.Cyan, c.Green, c.Yellow]
+pCols = [c.Cyan, c.PinkDark, c.Green, c.Yellow]
 
 
 class Player:
@@ -82,7 +82,7 @@ def printBoard(players, turn, text, p, game):
     for x in range(0, term[0]-15):
         print()
     print(f'{c.c}{"-"*65}')
-    print(f'{c.c}|{" "*((len(board)*2) + 1)}| {c.White}3D Tic Tac Toe{c.c} - Round {game}{" "*(19-len(str(game)))}|')
+    print(f'{c.c}|{" "*((len(board)*6) + 1)}| {c.White}3D Tic Tac Toe{c.c} - Round {game}{" "*(19-len(str(game)))}|')
     print(f'|{" "*9}{c.Red}{p[board[0][0][0]]} {p[board[0][0][1]]} {p[board[0][0][2]]}{c.c}     |{" "*18}{c.White}Scores{c.c}{" "*19}|')
     print(f'|{" "*8}{c.Green}{p[board[0][1][0]]} {p[board[0][1][1]]} {p[board[0][1][2]]}{c.c}      |{"-"*43}|')
     print(
